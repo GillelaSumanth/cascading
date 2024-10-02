@@ -1,0 +1,19 @@
+<div>
+    <label><b>Country</b></label>
+    <select (change)="StateList($event)">
+        <option *ngFor="let X of CountryData">{{X.Country}}</option>
+    </select>
+</div>
+<div>
+    <label><b>State</b></label>
+    <select *ngIf="StatesData=='INDIA'">
+        <option *ngFor="let X of IndiaStates">{{X.State}}
+            <!-- <span *ngIf="StatesData=='INDIA'">{{X.State}}</span> -->
+        </option>
+    </select>
+    <select *ngIf="StatesData=='USA'">
+        <option *ngFor="let X of USAStates">{{X.State}}
+            <!-- <span *ngIf="StatesData=='USA'">{{X.State}}</span> -->
+        </option>
+    </select>
+</div>
